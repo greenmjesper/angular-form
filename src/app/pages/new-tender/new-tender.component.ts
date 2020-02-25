@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-new-tender',
@@ -8,13 +10,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class NewTenderComponent implements OnInit {
   newTenderForm: FormGroup;
-  @Output() tenderComplete = new EventEmitter();
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
+    private pagesService: PagesService
   ) { }
 
   ngOnInit() {
+    window.localStorage.setItem('progress', '0');
+    setTimeout(() => {
+      this.pagesService.setProgressValue({ value: 0 });
+    });
     this.newTenderForm = this.formBuilder.group({
       Name: [''],
       Description: [''],
@@ -28,7 +35,8 @@ export class NewTenderComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    window.localStorage.setItem('progress', '25');
+    this.router.navigate(['/create-form']);
   }
 
 }

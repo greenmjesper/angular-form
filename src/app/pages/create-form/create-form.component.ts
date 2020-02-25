@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-create-form',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private pagesService: PagesService
+  ) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.pagesService.setProgressValue({ value: Number(window.localStorage.getItem('progress')) });
+    });
+    
   }
 
 }

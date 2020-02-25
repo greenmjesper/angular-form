@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PagesService } from './pages.service';
 
 @NgModule({
   declarations: [CreateFormComponent, NewTenderComponent, PagesComponent],
@@ -15,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgZorroAntdModule,
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [PagesService]
 })
 export class PagesModule { }
