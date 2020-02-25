@@ -1,0 +1,72 @@
+<div class="new-tender">
+  <div class="header">SKAPA NYTT ANBUD</div>
+  <form [formGroup]="newTenderForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="columns col-sm-6">
+        <div class="input-element name">
+          <span class="title">Namn för anbudsförfrågan</span>
+          <input nz-input placeholder="Basic usage" formControlName="Name" />
+        </div>
+        <div class="input-element description">
+          <span class="title">beskrivning</span>
+          <textarea row="7" nz-input nzSize="large" formControlName="Description"></textarea>
+        </div>
+        <div class="input-element will-buy">
+          <span class="title">vi ska köpa</span>
+          <nz-radio-group formControlName="BuyOption">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="products">Produkter</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="services">tjänster</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element category">
+          <span class="title">kategori</span>
+          <nz-select nzShowSearch nzAllowClear formControlName="Category">
+            <nz-option nzLabel="1" nzValue="1"></nz-option>
+            <nz-option nzLabel="2" nzValue="2"></nz-option>
+            <nz-option nzLabel="3" nzValue="3"></nz-option>
+        </nz-select>
+        </div>
+      </div>
+      <div class="columns col-sm-6">
+        <div class="input-element purchase">
+          <span class="title">detta är ett</span>
+          <nz-radio-group formControlName="Purchase">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="products">fristäende köp</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="services">ingär i ett större köp</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element purchase-value">
+          <span class="title">inköpsvärde</span>
+          <nz-select nzShowSearch nzAllowClear formControlName="PurchaseValue">
+            <nz-option nzLabel="1" nzValue="1"></nz-option>
+            <nz-option nzLabel="2" nzValue="2"></nz-option>
+            <nz-option nzLabel="3" nzValue="3"></nz-option>
+        </nz-select>
+        </div>
+        <div class="input-element tender-form">
+          <span class="title">anbudsform</span>
+          <nz-radio-group formControlName="TenderForm">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="direct-purchasing">direktinköp</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="blanket">ramavtal</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="haze">DIS</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element importance">
+          <span class="title">upphandlingens betydelse</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="Importance"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Mellan</span>
+            <span>Liten</span>
+          </div>
+        </div>
+      </div>
+      <button class="next-step" nz-button [nzSize]="large" nzType="danger">Nästa steg</button>
+    </div>
+  </form>
+</div>

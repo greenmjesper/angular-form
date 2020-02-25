@@ -6,22 +6,12 @@ import { CommonLayoutComponent } from "./layouts/common-layout/common-layout.com
 
 import { FullLayout_ROUTES } from "./shared/routes/full-layout.routes";
 import { CommonLayout_ROUTES } from "./shared/routes/common-layout.routes";
+import { PagesModule } from './pages/pages.module';
 
 const appRoutes: Routes = [
     {
         path: '',
-        redirectTo: '/dashboard/default',
-        pathMatch: 'full',
-    },
-    { 
-        path: '', 
-        component: CommonLayoutComponent,
-        children: CommonLayout_ROUTES 
-    },
-    { 
-        path: '', 
-        component: FullLayoutComponent, 
-        children: FullLayout_ROUTES
+        loadChildren: './pages/pages.module#PagesModule'
     }
 ];
 
@@ -30,7 +20,7 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes, { 
             preloadingStrategy: PreloadAllModules,
             useHash: true,
-            scrollPositionRestoration: 'enabled' 
+            scrollPositionRestoration: 'enabled'
         })
     ],
     exports: [

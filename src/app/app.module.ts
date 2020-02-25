@@ -34,9 +34,9 @@ registerLocaleData(en);
         NgChartjsModule
     ],
     providers: [
-        { 
+        {
             provide: NZ_I18N,
-            useValue: en_US, 
+            useValue: en_US,
         },
         ThemeConstantService
     ],

@@ -1,0 +1,38 @@
+.row {
+  margin-top: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.input-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.description textarea.ant-input {
+  height: 100px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.importance-values {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.next-step {
+  margin: 30px auto auto auto;
+}
