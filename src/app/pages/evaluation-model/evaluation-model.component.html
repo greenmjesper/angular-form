@@ -1,0 +1,181 @@
+<div class="evaluation-form">
+  <div class="header">utvärderingsmodell</div>
+  <form [formGroup]="evaulationForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="columns col-sm-6">
+        <div class="input-element sub-header">
+          <span>behovsspecifikation</span>
+        </div>
+        <div class="input-element specification">
+          <nz-select class="dropdown" nzShowSearch nzAllowClear formControlName="Specification">
+            <nz-option nzLabel="Kategori" nzValue="category"></nz-option>
+            <nz-option nzLabel="Tjänst / process" nzValue="process"></nz-option>
+            <nz-option nzLabel="Eget / delprojekt" nzValue="subproject"></nz-option>
+            <nz-option nzLabel="Betydelse" nzValue="meaning"></nz-option>
+            <nz-option nzLabel="Utvärdering" nzValue="evaluation"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element">
+          <nz-select class="dropdown" nzShowSearch nzAllowClear formControlName="Process">
+            <nz-option nzLabel="Kategori" nzValue="kategori"></nz-option>
+            <nz-option nzLabel="Tjänst / process" nzValue="process"></nz-option>
+            <nz-option nzLabel="Eget / delprojekt" nzValue="subproject"></nz-option>
+            <nz-option nzLabel="Betydelse" nzValue="meaning"></nz-option>
+            <nz-option nzLabel="Utvärdering" nzValue="evaluation"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element">
+          <nz-select class="dropdown" nzShowSearch nzAllowClear formControlName="Subproject">
+            <nz-option nzLabel="Kategori" nzValue="kategori"></nz-option>
+            <nz-option nzLabel="Tjänst / process" nzValue="process"></nz-option>
+            <nz-option nzLabel="Eget / delprojekt" nzValue="subproject"></nz-option>
+            <nz-option nzLabel="Betydelse" nzValue="meaning"></nz-option>
+            <nz-option nzLabel="Utvärdering" nzValue="evaluation"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element">
+          <nz-select class="dropdown" nzShowSearch nzAllowClear formControlName="Meaning">
+            <nz-option nzLabel="Kategori" nzValue="kategori"></nz-option>
+            <nz-option nzLabel="Tjänst / process" nzValue="process"></nz-option>
+            <nz-option nzLabel="Eget / delprojekt" nzValue="subproject"></nz-option>
+            <nz-option nzLabel="Betydelse" nzValue="meaning"></nz-option>
+            <nz-option nzLabel="Utvärdering" nzValue="evaluation"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element">
+          <nz-select class="dropdown" nzShowSearch nzAllowClear formControlName="Evaluation">
+            <nz-option nzLabel="Kategori" nzValue="kategori"></nz-option>
+            <nz-option nzLabel="Tjänst / process" nzValue="process"></nz-option>
+            <nz-option nzLabel="Eget / delprojekt" nzValue="subproject"></nz-option>
+            <nz-option nzLabel="Betydelse" nzValue="meaning"></nz-option>
+            <nz-option nzLabel="Utvärdering" nzValue="evaluation"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element sub-header scoring-criteria">
+          <span>Poäng kriterier</span>
+        </div>
+        <div class="input-element training">
+          <span class="title">utbildning</span>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="College" />
+            <div class="value-caption">högskola</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Degree" />
+            <div class="value-caption">examen</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Amount" />
+            <div class="value-caption bold-font">summa</div>
+          </div>
+        </div>
+        <div class="input-element experience">
+          <span class="title">erfarenhet</span>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Working" />
+            <div class="value-caption">arbetsliv</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Specialist" />
+            <div class="value-caption">specialist</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Comparable" />
+            <div class="value-caption">Jämförbara projekt</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="ExperienceAmount" />
+            <div class="value-caption bold-font">summa</div>
+          </div>
+        </div>
+      </div>
+      <div class="columns col-sm-6">
+        <div class="input-element sub-header scoring-criteria">
+          <span>Poäng kriterier</span>
+        </div>
+        <div class="input-element ranking">
+          <span class="title">Ranking</span>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="RankingTraining" />
+            <div class="value-caption">utbildning</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Experience" />
+            <div class="value-caption">erfarenhet</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="References" />
+            <div class="value-caption">referenser</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Award" />
+            <div class="value-caption">pris</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="RankingAmount" />
+            <div class="value-caption bold-font">summa</div>
+          </div>
+        </div>
+        <div class="input-element sub-header scoring-criteria">
+          <span>Poäng kriterier</span>
+        </div>
+        <div class="input-element references">
+          <span class="title">referenser</span>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="OutSourcer" />
+            <div class="value-caption">uppdragsgivare</div>
+          </div>
+          <div class="input-content left-padding">
+            <input nz-input nzSize="default" formControlName="Manager" />
+            <div class="value-caption">Chef</div>
+          </div>
+          <div class="input-content left-padding">
+            <input nz-input nzSize="default" formControlName="Others" />
+            <div class="value-caption">övriga</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Behavior" />
+            <div class="value-caption">beteende</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Cooperation" />
+            <div class="value-caption">samarbete</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="WorkingResults" />
+            <div class="value-caption">arbetsresultat</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Recommendation" />
+            <div class="value-caption">rekommendation</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="ReferencesAmount" />
+            <div class="value-caption bold-font">summa</div>
+          </div>
+        </div>
+        <div class="input-element sub-header scoring-criteria">
+          <span>Poäng kriterier</span>
+        </div>
+        <div class="input-element award">
+          <span class="title">Pris</span>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="AwardProcess" />
+            <div class="value-caption">process</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="Consultant" />
+            <div class="value-caption">konsult</div>
+          </div>
+          <div class="input-content">
+            <input nz-input nzSize="default" formControlName="AwardAmount" />
+            <div class="value-caption bold-font">summa</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons col-sm-12">
+        <button class="next-step" nz-button [nzSize]="large" nzType="danger">Nästa steg</button>
+      </div>
+    </div>
+  </form>
+</div>

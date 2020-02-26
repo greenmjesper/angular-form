@@ -1,4 +1,12 @@
 @import url('./assets/lib/hljs/styles/atom-one-light.css');
 @import url('../node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
-@import './assets/scss/app.scss'
+@import './assets/scss/app.scss';
+
+.ant-checkbox-inner, .ant-radio-inner {
+  border-color: #979fab;
+}
+
+.ant-input, .ant-select-selection {
+  border: 1px solid darkgray;
+}

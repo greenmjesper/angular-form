@@ -24,9 +24,11 @@ export class CreateFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.localStorage.setItem('progress', '25');
     setTimeout(() => {
-      this.pagesService.setProgressValue({ value: Number(window.localStorage.getItem('progress')) });
+      this.pagesService.setProgressValue({ value: 25 });
     });
+
     this.createForm = this.formBuilder.group({
       Approve: [''],
       Category: [''],
@@ -57,8 +59,8 @@ export class CreateFormComponent implements OnInit {
   }
 
   onMainSubmit() {
-    window.localStorage.setItem('progress', '25');
-    this.router.navigate(['/create-form']);
+    window.localStorage.setItem('progress', '50');
+    this.router.navigate(['/references']);
   }
 
   onAddFieldSubmit() {

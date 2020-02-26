@@ -1,0 +1,192 @@
+<div class="references-form">
+  <div class="header">REFERENSER</div>
+  <form [formGroup]="referencesForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="columns col-sm-6">
+         <div class="input-element approve">
+          <span class="title">referensperson</span>
+          <nz-radio-group formControlName="Person">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element category-service">
+          <span class="title">relation</span>
+          <nz-select nzShowSearch nzAllowClear formControlName="Relation">
+            <nz-option nzLabel="1" nzValue="1"></nz-option>
+            <nz-option nzLabel="2" nzValue="2"></nz-option>
+            <nz-option nzLabel="3" nzValue="3"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element strength">
+          <span class="title">konsuktens styrkor</span>
+          <nz-radio-group formControlName="ConsumerStrength">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element behavior">
+          <span class="title">beteenden</span>
+          <nz-select nzShowSearch nzAllowClear formControlName="Behavior">
+            <nz-option nzLabel="1" nzValue="1"></nz-option>
+            <nz-option nzLabel="2" nzValue="2"></nz-option>
+            <nz-option nzLabel="3" nzValue="3"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element weekness">
+          <span class="title">konsuktens svgheter</span>
+          <nz-radio-group formControlName="ConsumerWeakness">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element category-service">
+          <span class="title">relation</span>
+          <nz-select nzShowSearch nzAllowClear formControlName="Relation2">
+            <nz-option nzLabel="1" nzValue="1"></nz-option>
+            <nz-option nzLabel="2" nzValue="2"></nz-option>
+            <nz-option nzLabel="3" nzValue="3"></nz-option>
+          </nz-select>
+        </div>
+        <div class="input-element skills">
+          <span class="title">samarbetsförmäga</span>
+          <nz-radio-group formControlName="InterpersonalSkills">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element skills-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="SkillsSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+      </div>
+      <div class="columns col-sm-6">
+        <div class="input-element stress">
+          <span class="title">hantera stress</span>
+          <nz-radio-group formControlName="HandleStress">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element stress-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="StressSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="input-element working-results">
+          <span class="title">arbetsresultat</span>
+          <nz-radio-group formControlName="WorkingResults">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element working-results-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="WorkingResultsSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="input-element presence">
+          <span class="title">närvaro</span>
+          <nz-radio-group formControlName="Presence">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element presence-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="PresenceSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="input-element addictions">
+          <span class="title">missbruksproblem</span>
+          <nz-radio-group formControlName="Addictions">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element addictions-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="AddictionsSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="input-element addictions">
+          <span class="title">rekommendera konsulten till and.</span>
+          <nz-radio-group formControlName="Recommend">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element recommend-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="RecommendSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="input-element cold-schedules">
+          <span class="title">kålla tidsplaner</span>
+          <nz-radio-group formControlName="ColdSchedules">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+          </nz-radio-group>
+        </div>
+        <div class="input-element cold-schedules-slider">
+          <nz-slider
+            [nzStep]="10"
+            formControlName="ColdSchedulesSlider"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="importance-values">
+            <span>Stor</span>
+            <span>Liten</span>
+          </div>
+        </div>
+      </div>
+      <div class="buttons col-sm-12">
+        <button class="next-step" nz-button [nzSize]="large" nzType="danger">Nästa steg</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -9,7 +9,7 @@
   padding-top: 20px;
   text-transform: uppercase;
   font-size: 20px;
-}
+} 
 
 .input-element {
   display: flex;
@@ -17,10 +17,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 15px;
-}
-
-.description textarea.ant-input {
-  height: 100px;
 }
 
 .title {
@@ -35,6 +31,9 @@
   margin-top: -20px;
 }
 
-.next-step {
-  margin: 30px auto auto auto;
+.buttons {
+  margin: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -7,9 +7,12 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagesService } from './pages.service';
+import { ReferencesComponent } from './references/references.component';
+import { EvaluationModelComponent } from './evaluation-model/evaluation-model.component';
+import { CompletedComponent } from './completed/completed.component';
 
 @NgModule({
-  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent],
+  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent, ReferencesComponent, EvaluationModelComponent, CompletedComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
