@@ -1,0 +1,87 @@
+.row {
+  margin-top: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.input-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.description textarea.ant-input {
+  height: 100px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.importance-values {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button + button {
+  margin-left: 5px;
+}
+
+.type-of-field {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-field-content {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-field-content .ant-select {
+  width: 100%;
+}
+
+.field-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.multiple-choice {
+  margin-bottom: 15px;
+}
+
+.add-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.add-field-content .add {
+  margin-top: 30px;
+}
