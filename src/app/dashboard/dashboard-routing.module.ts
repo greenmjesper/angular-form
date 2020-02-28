@@ -6,7 +6,7 @@ import { WithBreadcrumbDashboardComponent } from './with-breadcrumb/with-breadcr
 
 const routes: Routes = [
     {
-        path: 'default',
+        path: '/dashboard/default',
         component: DefaultDashboardComponent,
         data: {
             title: 'Dashboard ',

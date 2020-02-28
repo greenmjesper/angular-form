@@ -51,21 +51,62 @@
       <div class="type-of-field" *ngIf="!addFieldInfoShow">
         <div class="title">TYP AV FÄLT</div>
         <nz-select nzShowSearch nzAllowClear [(ngModel)]="type_of_field" (ngModelChange)="changeSelect($event)" >
-          <nz-option nzLabel="1" nzValue="1"></nz-option>
-          <nz-option nzLabel="2" nzValue="2"></nz-option>
-          <nz-option nzLabel="3" nzValue="3"></nz-option>
+          <nz-option nzLabel="flera val" nzValue="1"></nz-option>
+          <nz-option nzLabel="falla ner" nzValue="2"></nz-option>
+          <nz-option nzLabel="skala" nzValue="3"></nz-option>
+          <nz-option nzLabel="nps" nzValue="4"></nz-option>
         </nz-select>
       </div>
       <div *ngIf="addFieldInfoShow">
         <form [formGroup]="addFieldForm" (ngSubmit)="onAddFieldSubmit()">
           <input class="multiple-choice" nz-input placeholder="FLERVALSFRÅGA" formControlName="MultipleChoice" />
-          <div class="field-content">
-            <label nz-checkbox formControlName="firstCheck"></label>
-            <input nz-input formControlName="firstValue"/>
+          <div *ngIf="type_of_field === '1'">
+            <div class="field-content">
+              <label nz-checkbox formControlName="firstCheck"></label>
+              <input nz-input formControlName="firstValue"/>
+            </div>
+            <div class="field-content">
+              <label nz-checkbox formControlName="secondCheck"></label>
+              <input nz-input formControlName="secondValue"/>
+            </div>
           </div>
-          <div class="field-content">
-            <label nz-checkbox formControlName="secondCheck"></label>
-            <input nz-input formControlName="secondValue"/>
+          <div *ngIf="type_of_field === '2'">
+            <nz-select nzShowSearch nzAllowClear formControlName="additional_dropdown">
+              <nz-option nzLabel="1" nzValue="1"></nz-option>
+              <nz-option nzLabel="2" nzValue="2"></nz-option>
+              <nz-option nzLabel="3" nzValue="3"></nz-option>
+              <nz-option nzLabel="4" nzValue="4"></nz-option>
+            </nz-select>
+          </div>
+          <div *ngIf="type_of_field === '3'">
+            <div class="input-element">
+              <nz-slider
+                [nzStep]="10"
+                formControlName="additionalScale"
+                nzTooltipVisible="never"
+                style="width: 100%;"
+              ></nz-slider>
+              <div class="importance-values">
+                <span>Stor</span>
+                <span>Mellan</span>
+                <span>Liten</span>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="type_of_field === '4'">
+            <div class="input-element">
+              <nz-slider
+                [nzMin]="0"
+                [nzMax]="10"
+                formControlName="additionalNps"
+                nzTooltipVisible="never"
+                style="width: 100%;"
+              ></nz-slider>
+              <div class="importance-values">
+                <span>0</span>
+                <span>10</span>
+              </div>
+            </div>
           </div>
           <div class="add-content">Lägg till ytterligare fält</div>
         </form>

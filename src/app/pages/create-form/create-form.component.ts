@@ -42,6 +42,9 @@ export class CreateFormComponent implements OnInit {
       firstValue: [''],
       secondCheck: ['false'],
       secondValue: [''],
+      additional_dropdown: [''],
+      additionalScale: [''],
+      additionalNps: [''],
     });
   }
 
