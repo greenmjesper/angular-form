@@ -49,6 +49,6 @@ export class ReferencesComponent implements OnInit {
 
   onSubmit() {
     window.localStorage.setItem('progress', '75');
-    this.router.navigate(['/evaluation-model']);
+    this.router.navigate(['/pages/evaluation-model']);
   }
 }

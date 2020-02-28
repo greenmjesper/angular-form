@@ -9,35 +9,40 @@ import { CompletedComponent } from './completed/completed.component';
 
 const routes: Routes = [
     {
-        path: '',
-        component: PagesComponent,
-        children: [
-            {
-                path: '',
-                redirectTo: 'new-tender'
-            },
-            {
-                path: 'new-tender',
-                component: NewTenderComponent
-            },
-            {
-                path: 'create-form',
-                component: CreateFormComponent
-            },
-            {
-                path: 'references',
-                component: ReferencesComponent
-            },
-            {
-                path: 'evaluation-model',
-                component: EvaluationModelComponent
-            },
-            {
-                path: 'completed',
-                component: CompletedComponent
-            }
-        ]
-    }
+        path: 'new-tender',
+        component: NewTenderComponent,
+        data: {
+            title: 'New Tender'
+        }
+    },
+    {
+        path: 'create-form',
+        component: CreateFormComponent,
+        data: {
+            title: 'Create Form'
+        }
+    },
+    {
+        path: 'references',
+        component: ReferencesComponent,
+        data: {
+            title: 'References'
+        }
+    },
+    {
+        path: 'evaluation-model',
+        component: EvaluationModelComponent,
+        data: {
+            title: 'Evaluation'
+        }
+    },
+    {
+        path: 'completed',
+        component: CompletedComponent,
+        data: {
+            title: 'Completed'
+        }
+    },
 ];
 
 @NgModule({

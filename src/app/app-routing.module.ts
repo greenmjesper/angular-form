@@ -11,7 +11,23 @@ import { PagesModule } from './pages/pages.module';
 const appRoutes: Routes = [
     {
         path: '',
-        loadChildren: './pages/pages.module#PagesModule'
+        redirectTo: '/pages/new-tender',
+        pathMatch: 'full',
+    },
+    {
+        path: 'dashboard',
+        redirectTo: '/dashboard/default',
+        pathMatch: 'full',
+    },
+    { 
+        path: '', 
+        component: CommonLayoutComponent,
+        children: CommonLayout_ROUTES 
+    },
+    { 
+        path: '', 
+        component: FullLayoutComponent, 
+        children: FullLayout_ROUTES
     }
 ];
 

@@ -60,7 +60,7 @@ export class CreateFormComponent implements OnInit {
 
   onMainSubmit() {
     window.localStorage.setItem('progress', '50');
-    this.router.navigate(['/references']);
+    this.router.navigate(['/pages/references']);
   }
 
   onAddFieldSubmit() {

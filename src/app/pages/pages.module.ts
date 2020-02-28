@@ -20,6 +20,5 @@ import { CompletedComponent } from './completed/completed.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PagesService]
 })
 export class PagesModule { }

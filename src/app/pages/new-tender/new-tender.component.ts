@@ -36,7 +36,7 @@ export class NewTenderComponent implements OnInit {
 
   onSubmit() {
     window.localStorage.setItem('progress', '25');
-    this.router.navigate(['/create-form']);
+    this.router.navigate(['/pages/create-form']);
   }
 
 }

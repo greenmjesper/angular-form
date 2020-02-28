@@ -15,6 +15,7 @@ import { FullLayoutComponent } from './layouts/full-layout/full-layout.component
 
 import { NgChartjsModule } from 'ng-chartjs';
 import { ThemeConstantService } from './shared/services/theme-constant.service';
+import { PagesService } from './pages/pages.service';
 
 registerLocaleData(en);
 
@@ -38,7 +39,8 @@ registerLocaleData(en);
             provide: NZ_I18N,
             useValue: en_US,
         },
-        ThemeConstantService
+        ThemeConstantService,
+        PagesService
     ],
     bootstrap: [AppComponent]
 })

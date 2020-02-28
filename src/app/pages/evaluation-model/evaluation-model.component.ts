@@ -57,6 +57,6 @@ export class EvaluationModelComponent implements OnInit {
 
   onSubmit() {
     window.localStorage.setItem('progress', '100');
-    this.router.navigate(['/completed']);
+    this.router.navigate(['/pages/completed']);
   }
 }

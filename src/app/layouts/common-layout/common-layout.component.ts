@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
-import { Observable } from "rxjs";
+import { Observable, Subscription } from "rxjs";
 import { distinctUntilChanged, filter, map, startWith } from "rxjs/operators";
 import { IBreadcrumb } from "../../shared/interfaces/breadcrumb.type";
 import { ThemeConstantService } from '../../shared/services/theme-constant.service';
+import { PagesService } from 'src/app/pages/pages.service';
 
 @Component({
     selector: 'app-common-layout',
@@ -19,7 +20,10 @@ export class CommonLayoutComponent  {
     isExpand: boolean;
     selectedHeaderColor: string;
 
-    constructor(private router: Router,  private activatedRoute: ActivatedRoute, private themeService: ThemeConstantService) {
+    progress = 0;
+    pagesServiceSubscription: Subscription;
+
+    constructor(private router: Router,  private activatedRoute: ActivatedRoute, private themeService: ThemeConstantService, private pagesService: PagesService) {
         this.router.events.pipe(
             filter(event => event instanceof NavigationEnd),
             map(() => {
@@ -50,7 +54,20 @@ export class CommonLayoutComponent  {
         this.themeService.isSideNavDarkChanges.subscribe(isDark => this.isSideNavDark = isDark);
         this.themeService.selectedHeaderColor.subscribe(color => this.selectedHeaderColor = color);   
         this.themeService.isExpandChanges.subscribe(isExpand => this.isExpand = isExpand);     
+        this.pagesService.progressSubject.subscribe(
+            res => {
+              if (res) {
+                this.progress = res.value;
+              }
+            }
+          )
     }
+
+    ngOnDestroy() {
+        if (this.pagesServiceSubscription) {
+          this.pagesServiceSubscription.unsubscribe();
+        }
+      }
 
     private buildBreadCrumb(route: ActivatedRoute, url: string = '', breadcrumbs: IBreadcrumb[] = []): IBreadcrumb[] {
         let label = '', path = '/', display = null;
