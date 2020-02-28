@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { Observable, Subscription } from "rxjs";
 import { distinctUntilChanged, filter, map, startWith } from "rxjs/operators";
@@ -11,7 +11,7 @@ import { PagesService } from 'src/app/pages/pages.service';
     templateUrl: './common-layout.component.html',
 })
 
-export class CommonLayoutComponent  {
+export class CommonLayoutComponent implements OnInit, OnDestroy {
 
     breadcrumbs$: Observable<IBreadcrumb[]>;
     contentHeaderDisplay: string;
@@ -70,7 +70,8 @@ export class CommonLayoutComponent  {
       }
 
     private buildBreadCrumb(route: ActivatedRoute, url: string = '', breadcrumbs: IBreadcrumb[] = []): IBreadcrumb[] {
-        let label = '', path = '/', display = null;
+        let label = '', path = '/';
+        const display = null;
 
         if (route.routeConfig) {
             if (route.routeConfig.data) {
