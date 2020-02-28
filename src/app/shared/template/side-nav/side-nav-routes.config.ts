@@ -9,14 +9,14 @@ export const ROUTES: SideNavInterface[] = [
     //     submenu: []
     // },
     {
-        path: '',
+        path: 'pages',
         title: 'Pages',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'appstore',
         submenu: [
             {
-                path: 'new-tender',
+                path: '/pages/new-tender',
                 title: 'New Tender',
                 iconType: '',
                 icon: '',
@@ -25,7 +25,7 @@ export const ROUTES: SideNavInterface[] = [
                 ]
             },
             {
-                path: 'create-form',
+                path: '/pages/create-form',
                 title: 'Create Form',
                 iconType: '',
                 icon: '',
@@ -34,7 +34,7 @@ export const ROUTES: SideNavInterface[] = [
                 ]
             },
             {
-                path: 'references',
+                path: '/pages/references',
                 title: 'References',
                 iconType: '',
                 icon: '',
@@ -43,7 +43,7 @@ export const ROUTES: SideNavInterface[] = [
                 ]
             },
             {
-                path: 'evaluation-model',
+                path: '/pages/evaluation-model',
                 title: 'Evaluation',
                 iconType: '',
                 icon: '',
