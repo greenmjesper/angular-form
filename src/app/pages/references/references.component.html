@@ -3,35 +3,41 @@
   <form [formGroup]="referencesForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="columns col-sm-6">
-         <div class="input-element approve">
-          <span class="title">referensperson</span>
-          <nz-radio-group formControlName="Person">
-            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
-          </nz-radio-group>
-        </div>
-        <div class="input-element category-service">
-          <span class="title">relation</span>
-          <nz-select nzShowSearch nzAllowClear formControlName="Relation">
-            <nz-option nzLabel="1" nzValue="1"></nz-option>
-            <nz-option nzLabel="2" nzValue="2"></nz-option>
-            <nz-option nzLabel="3" nzValue="3"></nz-option>
-          </nz-select>
-        </div>
-        <div class="input-element strength">
-          <span class="title">konsuktens styrkor</span>
-          <nz-radio-group formControlName="ConsumerStrength">
-            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
-          </nz-radio-group>
-        </div>
-        <div class="input-element behavior">
-          <span class="title">beteenden</span>
-          <nz-select nzShowSearch nzAllowClear formControlName="Behavior">
-            <nz-option nzLabel="1" nzValue="1"></nz-option>
-            <nz-option nzLabel="2" nzValue="2"></nz-option>
-            <nz-option nzLabel="3" nzValue="3"></nz-option>
-          </nz-select>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="input-element approve">
+             <span class="title">referensperson</span>
+             <nz-radio-group formControlName="Person">
+               <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+               <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+             </nz-radio-group>
+            </div>
+            <div class="input-element category-service">
+             <!-- <span class="title">relation</span> -->
+             <nz-select nzShowSearch nzAllowClear formControlName="Relation">
+               <nz-option nzLabel="1" nzValue="1"></nz-option>
+               <nz-option nzLabel="2" nzValue="2"></nz-option>
+               <nz-option nzLabel="3" nzValue="3"></nz-option>
+             </nz-select>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="input-element strength">
+              <span class="title">konsuktens styrkor</span>
+              <nz-radio-group formControlName="ConsumerStrength">
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+              </nz-radio-group>
+            </div>
+            <div class="input-element behavior">
+              <!-- <span class="title">beteenden</span> -->
+              <nz-select nzShowSearch nzAllowClear formControlName="Behavior">
+                <nz-option nzLabel="1" nzValue="1"></nz-option>
+                <nz-option nzLabel="2" nzValue="2"></nz-option>
+                <nz-option nzLabel="3" nzValue="3"></nz-option>
+              </nz-select>
+            </div>
+          </div>
         </div>
         <div class="input-element weekness">
           <span class="title">konsuktens svgheter</span>
