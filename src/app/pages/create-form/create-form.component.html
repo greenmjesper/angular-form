@@ -43,8 +43,8 @@
     </div>
   </form>
   <div class="buttons col-sm-12">
-    <button class="next-step" nz-button [nzSize]="large" nzType="default" (click)="createModal()">Skapa en ny form</button>
-    <button class="next-step" nz-button [nzSize]="large" nzType="danger" (click)="onMainSubmit()">Nästa steg</button>
+    <button class="next-step" nz-button [nzSize]="'large'" nzType="default" (click)="createModal()">Skapa en ny form</button>
+    <button class="next-step" nz-button [nzSize]="'large'" nzType="danger" (click)="onMainSubmit()">Nästa steg</button>
   </div>
   <nz-modal [nzFooter]="null" nzMaskClosable="false" nzClosable="false" [(nzVisible)]="modalIsVisible" nzTitle="LÄGG TILL FÄLT" (nzOnOk)="handleAdd()">
     <div class="add-field-content">
@@ -111,7 +111,7 @@
           <div class="add-content">Lägg till ytterligare fält</div>
         </form>
       </div>
-      <button class="add" nz-button [nzSize]="large" nzType="danger" (click)="onAddFieldSubmit()">Lägg till</button>
+      <button class="add" nz-button [nzSize]="'large'" nzType="danger" (click)="onAddFieldSubmit()">Lägg till</button>
     </div>
   </nz-modal>
 </div>
