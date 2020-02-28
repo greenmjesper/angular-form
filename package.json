@@ -12,7 +12,7 @@
     "build-prod": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod --base-href ./",
     "build-prod-state": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod --stats-json",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "postinstall": "ng build --aot -prod"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
