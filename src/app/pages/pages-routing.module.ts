@@ -6,6 +6,7 @@ import { ReferencesComponent } from './references/references.component';
 import { PagesComponent } from './pages.component';
 import { EvaluationModelComponent } from './evaluation-model/evaluation-model.component';
 import { CompletedComponent } from './completed/completed.component';
+import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
     {
@@ -41,6 +42,13 @@ const routes: Routes = [
         component: CompletedComponent,
         data: {
             title: 'Completed'
+        }
+    },
+    {
+        path: 'summary',
+        component: SummaryComponent,
+        data: {
+            title: 'Summary'
         }
     },
 ];

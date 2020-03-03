@@ -50,6 +50,15 @@ export const ROUTES: SideNavInterface[] = [
                 iconTheme: '',
                 submenu: [
                 ]
+            },
+            {
+                path: '/pages/summary',
+                title: 'Summary',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
             }
         ]
     }
