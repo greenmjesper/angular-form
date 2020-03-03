@@ -10,9 +10,10 @@ import { PagesService } from './pages.service';
 import { ReferencesComponent } from './references/references.component';
 import { EvaluationModelComponent } from './evaluation-model/evaluation-model.component';
 import { CompletedComponent } from './completed/completed.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
-  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent, ReferencesComponent, EvaluationModelComponent, CompletedComponent],
+  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent, ReferencesComponent, EvaluationModelComponent, CompletedComponent, SummaryComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
