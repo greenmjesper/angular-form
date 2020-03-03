@@ -1,1 +1,107 @@
-<p>summary works!</p>
+<div class="summary-form">
+  <div class="pages-header">Sammanfattning</div>
+  <form [formGroup]="summaryForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="bold column flex-start">
+          Rubrik
+        </div>
+        <div class="column flex-center">
+          Utbildning
+        </div>
+        <div class="column flex-center">
+          Erfarenhet
+        </div>
+        <div class="column flex-center">
+          Referenser
+        </div>
+        <div class="column flex-center">
+          Pris
+        </div>
+        <div class="bold column flex-start">
+          Totalt
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="bold column">
+          Ranking
+        </div>
+        <div class="column">
+          <input nz-input formControlName="utbildningRanking" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="erfarenhetRanking" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="referenserRanking" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="prisRanking" />
+        </div>
+        <div>
+          <input nz-input formControlName="totaltRanking" />
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="bold column">
+          Poäng
+        </div>
+        <div class="column">
+          <input nz-input formControlName="utbildningPoang" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="erfarenhetPoang" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="referenserPoang" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="prisPoang" />
+        </div>
+        <div>
+          <input nz-input formControlName="totaltPoang" />
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="bold column">
+          Uppfyllnad
+        </div>
+        <div class="column">
+          <input nz-input formControlName="utbildningUppfyllnad" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="erfarenhetUppfyllnad" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="referenserUppfyllnad" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="prisUppfyllnad" />
+        </div>
+        <div>
+          <input nz-input formControlName="totaltUppfyllnad" />
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="bold column">
+          Kommentar
+        </div>
+        <div class="column">
+          <input nz-input formControlName="utbildningKommentar" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="erfarenhetKommentar" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="referenserKommentar" />
+        </div>
+        <div class="column">
+          <input nz-input formControlName="prisKommentar" />
+        </div>
+        <div>
+          <input nz-input formControlName="totaltKommentar" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

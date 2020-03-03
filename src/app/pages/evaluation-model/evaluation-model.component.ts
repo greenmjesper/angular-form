@@ -18,9 +18,9 @@ export class EvaluationModelComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.localStorage.setItem('progress', '75');
+    window.localStorage.setItem('progress', '60');
     setTimeout(() => {
-      this.pagesService.setProgressValue({ value: 75 });
+      this.pagesService.setProgressValue({ value: 60 });
     });
 
     this.evaulationForm = this.formBuilder.group({
@@ -56,7 +56,7 @@ export class EvaluationModelComponent implements OnInit {
   }
 
   onSubmit() {
-    window.localStorage.setItem('progress', '100');
-    this.router.navigate(['/pages/completed']);
+    window.localStorage.setItem('progress', '80');
+    this.router.navigate(['/pages/summary']);
   }
 }

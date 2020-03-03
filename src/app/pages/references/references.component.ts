@@ -18,9 +18,9 @@ export class ReferencesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.localStorage.setItem('progress', '50');
+    window.localStorage.setItem('progress', '40');
     setTimeout(() => {
-      this.pagesService.setProgressValue({ value: 50 });
+      this.pagesService.setProgressValue({ value: 40 });
     });
 
     this.referencesForm = this.formBuilder.group({
@@ -48,7 +48,7 @@ export class ReferencesComponent implements OnInit {
   }
 
   onSubmit() {
-    window.localStorage.setItem('progress', '75');
+    window.localStorage.setItem('progress', '60');
     this.router.navigate(['/pages/evaluation-model']);
   }
 }
