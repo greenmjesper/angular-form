@@ -13,7 +13,6 @@ export class CompletedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.localStorage.setItem('progress', '100');
     setTimeout(() => {
       this.pagesService.setProgressValue({ value: 100 });
     });

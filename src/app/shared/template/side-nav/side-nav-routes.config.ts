@@ -10,7 +10,7 @@ export const ROUTES: SideNavInterface[] = [
     // },
     {
         path: 'pages',
-        title: 'Pages',
+        title: 'Flow 1',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'appstore',
@@ -60,6 +60,33 @@ export const ROUTES: SideNavInterface[] = [
                 submenu: [
                 ]
             }
+        ]
+    },
+    {
+        path: 'pages',
+        title: 'Flow 2',
+        iconType: 'nzIcon',
+        iconTheme: 'outline',
+        icon: 'appstore',
+        submenu: [
+            {
+                path: '/pages/tender-form',
+                title: 'Tender form supplier',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
+            {
+                path: '/pages/report-credit',
+                title: 'Report Credit',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
         ]
     }
 ]

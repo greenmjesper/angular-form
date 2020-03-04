@@ -1,0 +1,102 @@
+<div class="summary-form">
+  <div class="pages-header">Anbudsformulär leverantör</div>
+  <form [formGroup]="tenderForm" (ngSubmit)="onSubmit()">
+    <div class="row columns">
+      <div class="col-sm-8">
+        <div>
+          <div class="bold">
+            Välkommen att lämna anbud på vår förfrågan om upphandling av rekryteringskonsulttjänster till kommunens HR avdelning för 2020.
+          </div>
+          <br />
+          <div>
+            Kommunen ska genomföra en viktig rekrytering då vi ska ersätta vår chef för socialförvaltningen.....
+          </div>
+          <div class="bold">
+            Våra krav på er som företag:
+          </div>
+          <br />
+          <div>
+            Egenförsäkran
+          </div>
+          <div>
+            Det innebär att du garanterar att företaget inte har varit dömt för:
+          </div>
+          <div>
+            <div>∙ &nbsp;Penningtvätt​</div>
+            <div>∙ &nbsp;Människohandel</div>
+            <div>∙ &nbsp;Skattebrott</div>
+            <div>∙ &nbsp;.....</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <div style="font-size: 16px;">
+            Innehåll kommunens anbuds förfrågan rekryterings konsult:
+          </div>
+          <div>∙ &nbsp;Inledning</div>
+          <div>∙ &nbsp;Skallkrav företaget​</div>
+          <div>∙ &nbsp;Skallkrav konsult</div>
+          <div>∙ &nbsp;Utbildning</div>
+          <div>∙ &nbsp;Referenser</div>
+          <div>∙ &nbsp;Sammanfattning & återkoppling​</div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9 columns">
+            <div>Jag garanterar att samtliga skatter och avgifter är betalda</div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="taxAndFeePaid">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9 columns">
+            <div>Jag godkänner att Knipen Sverige AB genomför kredit och andra kontroller av vårt bolag​</div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="knipenSverige">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9 columns">
+            <div>Bolaget har en giltig ansvarsförsäkring på 10 msek</div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="mesk">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9 columns">
+            <div>Jag försäkrar på heder och samvete att lämnade uppgifter är riktiga​</div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="honor">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="buttons col-sm-12">
+        <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa sida</button>
+      </div>
+    </div>
+  </form>
+</div>

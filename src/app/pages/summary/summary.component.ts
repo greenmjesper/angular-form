@@ -36,7 +36,6 @@ export class SummaryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    window.localStorage.setItem('progress', '80');
     setTimeout(() => {
       this.pagesService.setProgressValue({ value: 80 });
     });
@@ -65,7 +64,6 @@ export class SummaryComponent implements OnInit {
   }
 
   onSubmit() {
-    window.localStorage.setItem('progress', '100');
     this.router.navigate(['/pages/completed']);
   }
 }

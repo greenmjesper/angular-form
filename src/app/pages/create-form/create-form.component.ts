@@ -24,7 +24,6 @@ export class CreateFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.localStorage.setItem('progress', '20');
     setTimeout(() => {
       this.pagesService.setProgressValue({ value: 20 });
     });
@@ -62,7 +61,6 @@ export class CreateFormComponent implements OnInit {
   }
 
   onMainSubmit() {
-    window.localStorage.setItem('progress', '40');
     this.router.navigate(['/pages/references']);
   }
 

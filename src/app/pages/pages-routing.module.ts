@@ -7,6 +7,8 @@ import { PagesComponent } from './pages.component';
 import { EvaluationModelComponent } from './evaluation-model/evaluation-model.component';
 import { CompletedComponent } from './completed/completed.component';
 import { SummaryComponent } from './summary/summary.component';
+import { TenderFormComponent } from './tender-form/tender-form.component';
+import { ReportCreditComponent } from './report-credit/report-credit.component';
 
 const routes: Routes = [
     {
@@ -49,6 +51,20 @@ const routes: Routes = [
         component: SummaryComponent,
         data: {
             title: 'Summary'
+        }
+    },
+    {
+        path: 'tender-form',
+        component: TenderFormComponent,
+        data: {
+            title: 'Tender Form'
+        }
+    },
+    {
+        path: 'report-credit',
+        component: ReportCreditComponent,
+        data: {
+            title: 'Report Credit'
         }
     },
 ];

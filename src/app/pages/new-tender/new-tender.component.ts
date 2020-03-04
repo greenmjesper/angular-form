@@ -18,7 +18,6 @@ export class NewTenderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.localStorage.setItem('progress', '0');
     setTimeout(() => {
       this.pagesService.setProgressValue({ value: 0 });
     });
@@ -35,7 +34,6 @@ export class NewTenderComponent implements OnInit {
   }
 
   onSubmit() {
-    window.localStorage.setItem('progress', '20');
     this.router.navigate(['/pages/create-form']);
   }
 

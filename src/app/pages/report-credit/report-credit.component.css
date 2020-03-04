@@ -11,21 +11,27 @@
   font-size: 20px;
 }
 
-.bold {
-  font-weight: 600;
-}
-
-.column {
-  height: 50px;
-  min-height: 50px;
+.columns {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-.flex-center {
-  justify-content: center;
+input {
+  width: 230px;
+}
+
+.pictures {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pictures img {
+  width: 100%;
 }
 
 .buttons {

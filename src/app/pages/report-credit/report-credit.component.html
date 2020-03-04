@@ -1,0 +1,26 @@
+<div class="report-credit">
+  <div class="pages-header">Anbudsformulär leverantör</div>
+  <form [formGroup]="reportCreditForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-12 columns">
+        <div style="padding-right: 15px;">
+          Rapport kredit & vandel kontroll av:
+        </div>
+        <div>
+          <input nz-input formControlName="reportCredit" />
+        </div>
+      </div>
+    </div>
+    <div class="row pictures">
+      <div class="col-sm-6">
+        <img src="assets/images/report-credit-1.png" alt="Logo">
+      </div>
+      <div class="col-sm-6">
+        <img src="assets/images/report-credit-2.png" alt="Logo">
+      </div>
+    </div>
+    <div class="buttons col-sm-12">
+      <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa sida</button>
+    </div>
+  </form>
+</div>
