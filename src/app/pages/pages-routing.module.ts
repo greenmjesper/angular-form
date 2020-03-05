@@ -12,6 +12,8 @@ import { ReportCreditComponent } from './report-credit/report-credit.component';
 import { MunicipalityComponent } from './municipality/municipality.component';
 import { ConsultantComponent } from './consultant/consultant.component';
 import { ReferenceQuestionsComponent } from './reference-questions/reference-questions.component';
+import { SummaryInfoComponent } from './summary-info/summary-info.component';
+import { SummaryProvidedComponent } from './summary-provided/summary-provided.component';
 
 const routes: Routes = [
     {
@@ -89,6 +91,20 @@ const routes: Routes = [
         component: ReferenceQuestionsComponent,
         data: {
             title: 'References'
+        },
+    },
+    {
+        path: 'summary-info',
+        component: SummaryInfoComponent,
+        data: {
+            title: 'Summary provide information'
+        },
+    },
+    {
+        path: 'summary-provided',
+        component: SummaryProvidedComponent,
+        data: {
+            title: 'Summary provided information'
         },
     },
 ];

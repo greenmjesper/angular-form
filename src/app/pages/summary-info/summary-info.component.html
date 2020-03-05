@@ -1,0 +1,52 @@
+<div class="summary-info-form">
+  <div class="pages-header">Sammanfattning lämnade uppgifter</div>
+  <form [formGroup]="summaryInfoForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div class="bold">
+        Här en sammanfattning på lämnade uppgifter:<br>
+        Garanterade skall krav på bolaget:
+      </div>
+      <div class="row">
+        <nz-table #basicTable1 [nzData]="guaranteed" [nzShowPagination]="false">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th></th>
+              <th>Kravet Uppfyllt</th>
+              <th>Kravet Inte uppfyllt​</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data1 of basicTable1.data.slice(0,4)">
+              <td>{{data1.key}}</td>
+              <td>{{data1.name}}</td>
+              <td><label nz-checkbox formControlName="{{'checkValue' + data1.key}}"></label></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+                <div class="bold">
+                  Skallkrav konsultuppdrag
+                </div>
+              </td>
+            </tr>
+            <tr *ngFor="let data2 of basicTable1.data.slice(4)">
+              <td>{{data2.key}}</td>
+              <td>{{data2.name}}</td>
+              <td><label nz-checkbox formControlName="{{'checkValue' + data2.key}}"></label></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </div>
+      <div>
+        Skall kraven är uppfyllda anbudssvar kvalificerar till utvärdering
+      </div>
+      <div class="buttons col-sm-12">
+        <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa steg</button>
+      </div>
+    </div>
+  </form>
+</div>

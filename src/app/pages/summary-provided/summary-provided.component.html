@@ -1,0 +1,70 @@
+<div class="summary-info-form">
+  <div class="pages-header">Sammanfattning lämnade uppgifter</div>
+  <form [formGroup]="summaryProvidedForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div class="bold">
+        Här en sammanfattning på lämnade uppgifter:<br>
+        Garanterade skall krav på bolaget:
+      </div>
+      <div class="row">
+        <nz-table #basicTable1 [nzData]="provided" [nzShowPagination]="false">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Här en sammanfattning på lämnade uppgifter: </th>
+              <th>Poäng</th>
+              <th>Vikt %​</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data1 of basicTable1.data">
+              <td>{{data1.key}}</td>
+              <td>{{data1.name}}</td>
+              <td>
+                <nz-input-number
+                  *ngIf="data1.key < 7"
+                  formControlName="{{'point' + data1.key}}"
+                  [nzMin]="1"
+                  [nzMax]="100"
+                  [nzStep]="1"
+                ></nz-input-number>
+              </td>
+              <td>
+                <nz-input-number
+                  *ngIf="data1.key < 7"
+                  formControlName="{{'weight' + data1.key}}"
+                  [nzMin]="1"
+                  [nzMax]="100"
+                  [nzStep]="1"
+                  [nzFormatter]="formatterPercent"
+                  [nzParser]="parserPercent"
+                ></nz-input-number>
+              </td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </div>
+      <div>
+        <div class="reference">
+          <span style="margin-right: 5px;">1.</span>
+          <input nz-input formControlName="refer1" />
+        </div>
+        <div class="reference">
+          <span style="margin-right: 5px;">2.</span>
+          <input nz-input formControlName="refer2" />
+        </div>
+        <div class="reference">
+          <span style="margin-right: 5px;">3.</span>
+          <input nz-input formControlName="refer3" />
+        </div>
+      </div>
+      <div class="margins align-flex-around">
+        <div>Summa poäng</div>
+        <img src="assets/images/chart.png" alt="Chart">
+      </div>
+      <div class="buttons col-sm-12">
+        <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa steg</button>
+      </div>
+    </div>
+  </form>
+</div>

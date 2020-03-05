@@ -114,6 +114,24 @@ export const ROUTES: SideNavInterface[] = [
                 submenu: [
                 ]
             },
+            {
+                path: '/pages/summary-info',
+                title: 'Summary information',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
+            {
+                path: '/pages/summary-provided',
+                title: 'Summary provided information',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
         ]
     }
 ]

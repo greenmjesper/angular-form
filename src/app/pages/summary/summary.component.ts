@@ -10,24 +10,6 @@ import { PagesService } from '../pages.service';
 })
 export class SummaryComponent implements OnInit {
   summaryForm: FormGroup;
-  tableContent = [
-    {
-      key: '1',
-      name: 'Utbildning',
-    },
-    {
-      key: '2',
-      name: 'Erfarenhet',
-    },
-    {
-      key: '3',
-      name: 'Pris',
-    },
-    {
-      key: '4',
-      name: 'Totalt',
-    },
-  ];
 
   constructor(
     private formBuilder: FormBuilder,
