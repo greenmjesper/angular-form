@@ -9,7 +9,7 @@
              <span class="title">referensperson</span>
              <nz-radio-group formControlName="Person">
                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-               <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+               <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
              </nz-radio-group>
             </div>
             <div class="input-element category-service">
@@ -23,10 +23,10 @@
           </div>
           <div class="col-sm-6">
             <div class="input-element strength">
-              <span class="title">konsuktens styrkor</span>
+              <span class="title">konsultens styrkor</span>
               <nz-radio-group formControlName="ConsumerStrength">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element behavior">
@@ -42,14 +42,14 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="input-element weekness">
-              <span class="title">konsuktens svgheter</span>
+              <span class="title">konsultens svagheter</span>
               <nz-radio-group formControlName="ConsumerWeakness">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element category-service">
-              <span class="title">relation</span>
+              <span class="title">relation till konsulten</span>
               <nz-select nzShowSearch nzAllowClear formControlName="Relation2">
                 <nz-option nzLabel="1" nzValue="1"></nz-option>
                 <nz-option nzLabel="2" nzValue="2"></nz-option>
@@ -62,7 +62,7 @@
               <span class="title">samarbetsförmäga</span>
               <nz-radio-group formControlName="InterpersonalSkills">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element skills-slider">
@@ -73,8 +73,8 @@
                 style="width: 100%;"
               ></nz-slider>
               <div class="importance-values">
-                <span>Stor</span>
-                <span>Liten</span>
+                <span>Hög</span>
+                <span>Låg</span>
               </div>
             </div>
           </div>
@@ -82,10 +82,10 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="input-element stress">
-              <span class="title">hantera stress</span>
+              <span class="title">förmåga att hantera stress</span>
               <nz-radio-group formControlName="HandleStress">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element stress-slider">
@@ -103,10 +103,10 @@
           </div>
           <div class="col-sm-6">
             <div class="input-element working-results">
-              <span class="title">arbetsresultat</span>
+              <span class="title">leveranskvalitet</span>
               <nz-radio-group formControlName="WorkingResults">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element working-results-slider">
@@ -117,8 +117,9 @@
                 style="width: 100%;"
               ></nz-slider>
               <div class="importance-values">
-                <span>Stor</span>
-                <span>Liten</span>
+                <span>Hög</span>
+                <span>Medel</span>
+                <span>Låg</span>
               </div>
             </div>
           </div>
@@ -131,7 +132,7 @@
               <span class="title">närvaro</span>
               <nz-radio-group formControlName="Presence">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element presence-slider">
@@ -142,8 +143,8 @@
                 style="width: 100%;"
               ></nz-slider>
               <div class="importance-values">
-                <span>Stor</span>
-                <span>Liten</span>
+                <span>Hög</span>
+                <span>Låg</span>
               </div>
             </div>
           </div>
@@ -152,7 +153,7 @@
               <span class="title">missbruksproblem</span>
               <nz-radio-group formControlName="Addictions">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element addictions-slider">
@@ -163,8 +164,8 @@
                 style="width: 100%;"
               ></nz-slider>
               <div class="importance-values">
-                <span>Stor</span>
-                <span>Liten</span>
+                <span>Stora</span>
+                <span>Inga</span>
               </div>
             </div>
           </div>
@@ -172,10 +173,10 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="input-element addictions">
-              <span class="title">rekommendera konsulten till and.</span>
+              <span class="title">rekommendera konsulten till andra</span>
               <nz-radio-group formControlName="Recommend">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element recommend-slider">
@@ -186,17 +187,17 @@
                 style="width: 100%;"
               ></nz-slider>
               <div class="importance-values">
-                <span>Stor</span>
-                <span>Liten</span>
+                <span>Högst sannolikt</span>
+                <span>Osannolikt</span>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="input-element cold-schedules">
-              <span class="title">kålla tidsplaner</span>
+              <span class="title">hålla tidsplaner/levererar</span>
               <nz-radio-group formControlName="ColdSchedules">
                 <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börvärde</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="point">Börkrav</label>
               </nz-radio-group>
             </div>
             <div class="input-element cold-schedules-slider">

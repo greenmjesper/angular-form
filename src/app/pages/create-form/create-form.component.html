@@ -19,7 +19,7 @@
           </nz-select>
         </div>
         <div class="input-element recruiting">
-          <span class="title">ANTAL ÄR SOM <br />REKRYTERINGSKONSULT</span>
+          <span class="title">ANTAL ÅR SOM <br />REKRYTERINGSKONSULT</span>
           <nz-slider
             [nzStep]="10"
             formControlName="Recruiting"
@@ -27,15 +27,15 @@
             style="width: 100%;"
           ></nz-slider>
           <div class="importance-values">
-            <span>Stor</span>
-            <span>Mellan</span>
-            <span>Liten</span>
+            <span>Under 10</span>
+            <span>10-5</span>
+            <span>Under 5</span>
           </div>
         </div>
         <div class="input-element approve">
           <nz-radio-group formControlName="SetPoint">
             <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="required">Skallkrav</label>
-            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="setpoint">Börvärde</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="setpoint">Börkrav</label>
           </nz-radio-group>
         </div>
       </div>
@@ -43,7 +43,7 @@
     </div>
   </form>
   <div class="buttons col-sm-12">
-    <button class="next-step" nz-button [nzSize]="'large'" nzType="default" (click)="createModal()">Skapa en ny form</button>
+    <button class="next-step" nz-button [nzSize]="'large'" nzType="default" (click)="createModal()">Skapa ny mall</button>
     <button class="next-step" nz-button [nzSize]="'large'" nzType="danger" (click)="onMainSubmit()">Nästa steg</button>
   </div>
   <nz-modal [nzFooter]="null" nzMaskClosable="false" nzClosable="false" [(nzVisible)]="modalIsVisible" nzTitle="LÄGG TILL FÄLT" (nzOnOk)="handleAdd()">
