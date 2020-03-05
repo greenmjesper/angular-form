@@ -1,0 +1,75 @@
+<div class="report-credit">
+  <div class="pages-header">Anbudsformulär</div>
+  <form [formGroup]="municipalityCreditForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-6">
+        <div style="font-size: 16px;">
+          Kommunen behöver externt stöd vid rekrytering av ny​
+          förvaltningschef inom Socialförvaltningen. Vår avsikt är​
+          att rekryteringen skall genomföras genom:
+        </div>
+        <div>∙ Framtagning av kravprofil​</div>
+        <div>∙ Annonsförslag​</div>
+        <div>∙ Hantering kandidater​</div>
+        <div>∙ Utvärdering ansökningar</div>
+        <div>∙ Första intervjuer​</div>
+        <div>∙ Presentation kandidater​</div>
+        <div>∙ Uppföljning kandidatintervjuer​</div>
+        <div>∙ Sammanfattning och avslutning </div>
+      </div>
+      <div class="col-sm-6">
+        <div style="font-size: 16px;">
+          Utvärderingsmodell​
+          Kommunen  utvärderar enligt modellen
+        </div>
+        <div>1. Konsulten erfarenhet från rekryteringsuppdrag:​</div>
+        <div>2. Konsulten har erfarenhet som specialist från</div>
+        <div>3. rekrytering av chefer till offentlig sektor:​</div>
+        <div>4. Konsulten är certifierad i testverktyg:​</div>
+        <div>5. Konsultens utbildning: ​​</div>
+        <div>6. Konsultens examen:​​</div>
+        <div>7. Konsulten övriga utbildning:​​</div>
+        <div>8. Priset för rekryteringsuppdraget:​</div>
+      </div>
+    </div>
+    <div class="row">
+      <div style="font-size: 16px; font-weight: bold;">
+        Våra skallkrav för uppdraget
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9">
+            <div>
+              Konsulten skall ha minst 5 års arbetserfarenhet från rekryteringsbranschen​
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="recruitment">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-9">
+            <div>
+              Konsulten skall har erfarenhet från minst 3 rekryteringsprocesser på motsvarande 
+              nivå inom en två års period från 20200301
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <nz-radio-group formControlName="experience">
+              <label nz-radio nzValue="yes">Ja</label>
+              <label nz-radio nzValue="no">Nej</label>
+            </nz-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons col-sm-12">
+      <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa sida</button>
+    </div>
+  </form>
+</div>

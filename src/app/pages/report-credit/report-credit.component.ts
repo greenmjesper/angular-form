@@ -27,7 +27,7 @@ export class ReportCreditComponent implements OnInit {
   }
 
   onSubmit() {
-    this.router.navigate(['/pages/report-credit']);
+    this.router.navigate(['/pages/municipality']);
   }
 
 }

@@ -9,6 +9,9 @@ import { CompletedComponent } from './completed/completed.component';
 import { SummaryComponent } from './summary/summary.component';
 import { TenderFormComponent } from './tender-form/tender-form.component';
 import { ReportCreditComponent } from './report-credit/report-credit.component';
+import { MunicipalityComponent } from './municipality/municipality.component';
+import { ConsultantComponent } from './consultant/consultant.component';
+import { ReferenceQuestionsComponent } from './reference-questions/reference-questions.component';
 
 const routes: Routes = [
     {
@@ -66,6 +69,27 @@ const routes: Routes = [
         data: {
             title: 'Report Credit'
         }
+    },
+    {
+        path: 'municipality',
+        component: MunicipalityComponent,
+        data: {
+            title: 'Municipality'
+        },
+    },
+    {
+        path: 'consultant',
+        component: ConsultantComponent,
+        data: {
+            title: 'Consultant'
+        },
+    },
+    {
+        path: 'reference-questions',
+        component: ReferenceQuestionsComponent,
+        data: {
+            title: 'References'
+        },
     },
 ];
 

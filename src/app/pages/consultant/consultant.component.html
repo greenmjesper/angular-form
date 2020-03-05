@@ -1,0 +1,168 @@
+<div class="report-credit">
+  <div class="pages-header">Anbudsformulär</div>
+  <form [formGroup]="consultantForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="font16">
+          Vår föreslagna konsult heter​<br>
+          Carl Johan Ihre<br>
+          Varit anställd på Bolinder rekrytering ​
+          sedan 2000 och har följande profil:
+        </div>
+        <div class="slider">
+          <span class="title font16">Antal år som rekryteringskonsult</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="years"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>> 10 år</span>
+            <span>5 - 10 år</span>
+            <span>< 5 år</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">
+            Specialiserad på rekrytering av chefer​
+            <br>inom offentlig sektor
+          </span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="publicSector"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>> 10 år</span>
+            <span>5 - 10 år</span>
+            <span>< 5 år</span>
+          </div>
+        </div>
+        <div class="font16 margins">
+          Certifierad i personlihetstest:
+        </div>
+        <div class="options">
+          <span class="title">Personlighetstest</span>
+          <nz-radio-group class="option-group" formControlName="personality">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1">Psykometrika</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">DISK</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Assessio</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">Thomas tester</label>
+          </nz-radio-group>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="font16 margins">
+          Utbildning:​
+        </div>
+        <nz-radio-group class="options-flex margins" formControlName="education">
+          <label nz-radio nzValue="1">Högskola</label>
+          <label nz-radio nzValue="2">Gymnasium</label>
+          <label nz-radio nzValue="3">Annan utbildning</label>
+        </nz-radio-group>
+        <div class="align-flex">
+          <div class="font16 margins">
+            Inriktning:
+          </div>
+          <div class="options">
+            <span class="title">Högskola</span>
+            <nz-radio-group class="option-group" formControlName="college">
+              <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1">Juridik</label>
+              <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">Ekonomi</label>
+              <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Beteende</label>
+              <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">Psykologi</label>
+              <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">mm.....</label>
+            </nz-radio-group>
+          </div>
+        </div>
+        <div class="font16 margins">
+          Examens nivå: (om svar högskola)​
+        </div>
+        <nz-radio-group class="options-flex margins" formControlName="degreeLevel">
+          <label nz-radio nzValue="1">Kandidat</label>
+          <label nz-radio nzValue="2">Master</label>
+          <label nz-radio nzValue="3">Doktor​</label>
+        </nz-radio-group>
+        <div class="font16 margins">
+          Övrig utbildning:​
+        </div>
+        <div class="options">
+          <span class="title">Övrig utbildning​</span>
+          <nz-radio-group class="option-group" formControlName="otherEducation">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1">Ledarskap</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">Projektledning</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Juridik</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">mm…​</label>
+          </nz-radio-group>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div>Skickat referenser:​</div>
+        <div>
+          <div class="reference">
+            <span style="margin-right: 5px;">1.</span>
+            <input nz-input formControlName="refer1" />
+          </div>
+          <div class="reference">
+            <span style="margin-right: 5px;">2.</span>
+            <input nz-input formControlName="refer2" />
+          </div>
+          <div class="reference">
+            <span style="margin-right: 5px;">3.</span>
+            <input nz-input formControlName="refer3" />
+          </div>
+          <div class="font16 margins">
+            Priser:
+          </div>
+          <nz-radio-group class="options-flex margins" formControlName="prices">
+            <label nz-radio nzValue="1">Process</label>
+            <label nz-radio nzValue="2">Konsult</label>
+          </nz-radio-group>
+          <div class="options minWidth">
+            <span class="title">Process</span>
+            <div style="padding: 10px; width: 100%;">
+              <div class="align-flex-between marginBottom">
+                <div>Search</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="processSearch" />
+              </div>
+              <div class="align-flex-between marginBottom">
+                <div>Executive search​</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="executiveSearch" />
+              </div>
+              <div class="align-flex-between marginBottom">
+                <div>Second opinion​</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="secondOpinion" />
+              </div>
+              <div class="align-flex-between marginBottom">
+                <div>Hel rekryteringsprocess​</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="recruitmentProcess" />
+              </div>
+              <div class="align-flex-between marginBottom">
+                <div>Tester</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="tester" />
+              </div>
+            </div>
+          </div>
+          <div class="options minWidth">
+            <span class="title">Konsult</span>
+            <div style="padding: 10px; width: 100%;">
+              <div class="align-flex-between marginBottom">
+                <div>Senior</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="senior" />
+              </div>
+              <div class="align-flex-between marginBottom">
+                <div>Junior</div>
+                <input style="height: 25px; width: 80px;" nz-input formControlName="junior" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons col-sm-12">
+      <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa sida</button>
+    </div>
+  </form>
+</div>

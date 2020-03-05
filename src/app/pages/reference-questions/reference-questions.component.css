@@ -1,0 +1,126 @@
+.row {
+  margin-top: 30px;
+}
+
+.pages-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.align-flex-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.buttons {
+  margin: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider, .options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.slider-under-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.margins {
+  margin: 20px 0 20px 0;
+}
+
+.options {
+  margin: auto;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid green;
+  margin-bottom: 15px;
+}
+
+.options .title {
+  width: 100%;
+  border-bottom: 1px solid green;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.options .title .sub-title {
+  font-size: 11px;
+}
+
+.option-group {
+  padding: 10px;
+  width: 100%;
+}
+
+.options-flex {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  flex-wrap: wrap;
+}
+
+.align-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.align-flex-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reference {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.reference input {
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+}
+
+.reference input:focus {
+  border-bottom: 1px solid black;
+  outline: none !important;
+  outline-width: none !important;
+}
+
+.marginBottom {
+  margin-bottom: 10px;
+}
+
+.minWidth {
+  min-width: 300px;
+}
+
+.fullWidth {
+  width: 100%;
+}

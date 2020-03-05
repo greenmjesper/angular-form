@@ -87,6 +87,33 @@ export const ROUTES: SideNavInterface[] = [
                 submenu: [
                 ]
             },
+            {
+                path: '/pages/municipality',
+                title: 'Municipality',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
+            {
+                path: '/pages/consultant',
+                title: 'Consultant',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
+            {
+                path: '/pages/reference-questions',
+                title: 'References',
+                iconType: '',
+                icon: '',
+                iconTheme: '',
+                submenu: [
+                ]
+            },
         ]
     }
 ]

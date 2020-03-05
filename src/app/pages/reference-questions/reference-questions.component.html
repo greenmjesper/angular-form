@@ -1,0 +1,199 @@
+<div class="report-credit">
+  <div class="pages-header">Referenser</div>
+  <div class="align-flex-center">Referensfrågorna skickas till 3 relevanta referenspersoner​</div>
+  <form [formGroup]="referenceQuestionsForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="font16 margins align-flex-center">
+          Referensperson:​
+        </div>
+        <div class="options">
+          <span class="title">Relation</span>
+          <nz-radio-group class="option-group" formControlName="relation">
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1">Uppdragsgivare</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">Chef</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Kollega</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">Vän</label>
+            <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="5">mm......</label>
+          </nz-radio-group>
+        </div>
+        <div class="slider">
+          <span class="title font16">Refererar till uppdrag genomförda inom​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="assignments"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>> 1 år</span>
+            <span>12 - 6 mån</span>
+            <span>< 5 mån</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="font16 margins align-flex-center">
+              Konsultens styrkor:​
+            </div>
+            <div class="options">
+              <div class="title">
+                <div class="main-title">Beteenden:​</div>
+                <div class="sub-title">Flera svar möjliga​:​</div>
+              </div>
+              <nz-radio-group class="option-group" formControlName="strength">
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1">Affärsmässig</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">Noggrann</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Håller tider​</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4">Bra samarbete​</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="5">mm......</label>
+              </nz-radio-group>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="font16 margins align-flex-center">
+              Konsultens svgheter:
+            </div>
+            <div class="options fullWidth">
+              <div class="title">
+                <div class="main-title">Beteenden:​</div>
+                <div class="sub-title">Flera svar möjliga​:​</div>
+              </div>
+              <nz-radio-group class="option-group" formControlName="weaknesses">
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="1"><span style="font-size: 10px;">Saknar affärs-mässighet</span>​</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="2">Slarvig</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="3">Håller inte tider​​</label>
+                <label nz-radio style="display: block; height: 30px; line-height: 30px;" nzValue="4"><span style="font-size: 10px;">Inte bra samarbete​</span>​​</label>
+              </nz-radio-group>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="slider">
+          <span class="title font16">Samarbetsförmåga:​​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="skills"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>Stor</span>
+            <span>mellan</span>
+            <span>Liten</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">Hålla tidsplaner:​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="schedules"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>Levererar i tid</span>
+            <span style="width: 90px; text-align: center;">Levererar på marginalen</span>
+            <span style="width: 90px; text-align: right;">Levererar inte ii tid</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">Hantera stress:​​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="stress"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span style="width: 90px;">Hanterar stress bra</span>
+            <span style="width: 90px; text-align: center;">varken bra eller dåligt</span>
+            <span style="width: 90px; text-align: right;">Hanterar lnte stress</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">Arbetsresultat:​​​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="operatingResult"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span style="width: 90px;">Hög kvalitet</span>
+            <span>Mellan kvalitet</span>
+            <span style="width: 90px; text-align: right;">Låg kvalitet​</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">Närvaro:​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="attendance"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span style="width: 90px;">Hög närvaro</span>
+            <span>Låg närvaro​</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="slider">
+          <span class="title font16">Missbruksproblem:​​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="issues"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span style="width: 90px;">Inga problem</span>
+            <span style="width: 90px; text-align: center;">Vissa problem</span>
+            <span style="width: 90px; text-align: right;">Stora problem</span>
+          </div>
+        </div>
+        <div class="slider">
+          <span class="title font16">Rekommendera konsulten ​till andra:​​</span>
+          <nz-slider
+            [nzStep]="10"
+            formControlName="recommend"
+            nzTooltipVisible="never"
+            style="width: 100%;"
+          ></nz-slider>
+          <div class="slider-under-title">
+            <span>Ja</span>
+            <span>Kanske</span>
+            <span>Nej</span>
+          </div>
+        </div>
+        <div style="margin-top: 30px;">
+          <span class="title">Kontaktuppgifter för kompletterande  information:</span>
+          <div style="padding: 10px; width: 100%;">
+            <div class="align-flex-between marginBottom">
+              <div>Arbetsgivare:</div>
+              <input style="height: 25px; width: 200px;" nz-input formControlName="employer" />
+            </div>
+            <div class="align-flex-between marginBottom">
+              <div>Namn:​​</div>
+              <input style="height: 25px; width: 200px;" nz-input formControlName="name" />
+            </div>
+            <div class="align-flex-between marginBottom">
+              <div>E-postadress:​​</div>
+              <input style="height: 25px; width: 200px;" nz-input formControlName="email" />
+            </div>
+            <div class="align-flex-between marginBottom">
+              <div>Telefonnummer:​</div>
+              <input style="height: 25px; width: 200px;" nz-input formControlName="phone" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons col-sm-12">
+      <button class="next-step" nz-button [nzSize]="'large'" nzType="danger">Nästa sida</button>
+    </div>
+  </form>
+</div>

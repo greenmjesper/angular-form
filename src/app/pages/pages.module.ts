@@ -13,9 +13,12 @@ import { CompletedComponent } from './completed/completed.component';
 import { SummaryComponent } from './summary/summary.component';
 import { TenderFormComponent } from './tender-form/tender-form.component';
 import { ReportCreditComponent } from './report-credit/report-credit.component';
+import { MunicipalityComponent } from './municipality/municipality.component';
+import { ConsultantComponent } from './consultant/consultant.component';
+import { ReferenceQuestionsComponent } from './reference-questions/reference-questions.component';
 
 @NgModule({
-  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent, ReferencesComponent, EvaluationModelComponent, CompletedComponent, SummaryComponent, TenderFormComponent, ReportCreditComponent],
+  declarations: [CreateFormComponent, NewTenderComponent, PagesComponent, ReferencesComponent, EvaluationModelComponent, CompletedComponent, SummaryComponent, TenderFormComponent, ReportCreditComponent, MunicipalityComponent, ConsultantComponent, ReferenceQuestionsComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
