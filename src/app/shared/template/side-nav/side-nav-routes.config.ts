@@ -9,15 +9,15 @@ export const ROUTES: SideNavInterface[] = [
     //     submenu: []
     // },
     {
-        path: 'pages',
-        title: 'Flow 1',
+        path: 'Pages',
+        title: 'Upphandlare',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'appstore',
         submenu: [
             {
                 path: '/pages/new-tender',
-                title: 'New Tender',
+                title: 'Ny Upphandling',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -26,7 +26,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/create-form',
-                title: 'Create Form',
+                title: 'Skapa formulär',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -35,7 +35,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/references',
-                title: 'References',
+                title: 'Referenser',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -44,7 +44,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/evaluation-model',
-                title: 'Evaluation',
+                title: 'Utvärdering',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -53,7 +53,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/summary',
-                title: 'Summary',
+                title: 'Summering',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -63,15 +63,15 @@ export const ROUTES: SideNavInterface[] = [
         ]
     },
     {
-        path: 'pages',
-        title: 'Flow 2',
+        path: 'Pages',
+        title: 'Leverantör',
         iconType: 'nzIcon',
         iconTheme: 'outline',
         icon: 'appstore',
         submenu: [
             {
                 path: '/pages/tender-form',
-                title: 'Tender form supplier',
+                title: 'Anbud',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -80,7 +80,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/report-credit',
-                title: 'Report Credit',
+                title: 'Vandelsprövning',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -89,7 +89,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/municipality',
-                title: 'Municipality',
+                title: 'Anbudsförfrå',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -98,7 +98,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/consultant',
-                title: 'Consultant',
+                title: 'Konsulten',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -107,7 +107,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/reference-questions',
-                title: 'References',
+                title: 'Referenser',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -116,7 +116,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/summary-info',
-                title: 'Summary information',
+                title: 'Summering information',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
@@ -125,7 +125,7 @@ export const ROUTES: SideNavInterface[] = [
             },
             {
                 path: '/pages/summary-provided',
-                title: 'Summary provided information',
+                title: 'Summering lämnad information',
                 iconType: '',
                 icon: '',
                 iconTheme: '',
